@@ -9,30 +9,26 @@
  
           <h1 class="mb-3">{{ $post->title }}</h1>
             <div class="mb-3">
-          <a href="/dashboard/posts" class="btn btn-primary"><span data-feather="arrow-left"></span> Kembali Ke Menu Data Mahasiswa</a>
-          <a href="/dashboard/posts/{{ $post->slug }}/edit" class="btn btn-warning"><span data-feather="edit"></span> Edit</a>
-          <form action="/dashboard/posts/{{ $post->slug }}" method="post" class="d-inline">
-            @method('delete')
-            @csrf
-            <button class="btn btn-danger border-0" onclick="return confirm('apakah yakin ingin menghapus data')">
-              <span data-feather="trash-2"></span>Hapus</button>
-            </form>
+          <a href="/dashboard/keuangan" class="btn btn-primary"><span data-feather="arrow-left"></span> Kembali Ke Menu Data Mahasiswa</a>
+          <a href="/dashboard/keuangan/{{ $post->id }}/edit" class="btn btn-warning"><span data-feather="edit"></span> Edit</a>
+          <div class="btn-group">
+            <button type="button" class="btn btn-info">Download Data Mahasiswa</button>
+            <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="visually-hidden">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Download</a></li>
+            </ul>
+          </div>
          </div>
 
 
          <div class="col-lg-8">
               @csrf
               <div class="mb-3">
-                <label for="NIM" class="form-label">NIM</label>
-                <input type="text" class="form-control @error('NIM') is-invalid @enderror" id="NIM" name="NIM" disabled autofocus value="{{ old('NIM', $post->NIM) }}">
-              </div>
-              <div class="mb-3">
                 <label for="nama" class="form-label">Nama Mahasiswa</label>
                 <input type="text" class="form-control @error('nama') is-invalid @enderror" id="nama" name="nama" disabled autofocus value="{{ old('nama', $post->nama ) }}">
-              </div>
-              <div class="mb-3">
-                <label for="category" class="form-label">Jurusan</label>
-                <input type="text" class="form-control @error('category') is-invalid @enderror" id="category" name="category" disabled autofocus value="{{ old('category', $post->category->name ) }}">
+                
               </div>
               {{-- jurusan  --}}
               <div class="mb-3">
@@ -41,9 +37,14 @@
               
               </div>
               <div class="mb-3">
-                <label for="alamat" class="form-label">Alamat</label>
-                <input type="text" class="form-control @error('alamat') is-invalid @enderror" id="alamat" name="alamat" disabled autofocus value="{{ old('alamat', $post->alamat) }}">
-             
+                <label for="NIM" class="form-label">NIM</label>
+                <input type="text" class="form-control @error('NIM') is-invalid @enderror" id="NIM" name="NIM" disabled autofocus value="{{ old('NIM', $post->NIM) }}">
+               
+              </div>
+              <div class="mb-3">
+                <label for="NIK" class="form-label">NIK</label>
+                <input type="text" class="form-control @error('NIK') is-invalid @enderror" id="NIK" name="NIK" disabled autofocus value="{{ old('NIK', $post->NIK) }}">
+              
               </div>
               <div class="mb-3">
                 <label for="no_hp" class="form-label">NO HANDPHONE</label>
@@ -61,9 +62,9 @@
              
               </div>
               <div class="mb-3">
-                <label for="tanggal_pembayaran" class="form-label">Tanggal Pembayaran</label>
+                <label for="tanggal_pembayaran" class="form-label">Tanggal Bayar</label>
                 <input type="text" class="form-control @error('tanggal_pembayaran') is-invalid @enderror" id="tanggal_pembayaran" name="tanggal_pembayaran" disabled autofocus value="{{ old('tanggal_pembayaran', $post->tanggal_pembayaran) }}">
-             
+              
               </div>
               <div class="mb-3">
                 <label for="status_registrasi" class="form-label">Status Registrasi</label>

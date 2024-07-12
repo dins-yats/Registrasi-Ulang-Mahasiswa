@@ -4,8 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="hayatudin">
-    <title>Siketan | Dashboard</title>
-    {{-- <title>Siketan | {{ $title }}</title> --}}
+    <title>Registrasi Ulang | Dashboard</title>
+    
+    <link rel="icon" type="image/jpg" href="/img/sekayu.ico">
+
 
     
 

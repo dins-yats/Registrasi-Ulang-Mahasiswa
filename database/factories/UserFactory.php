@@ -33,17 +33,8 @@ class UserFactory extends Factory
         // ]);
             
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
-            'id_poktan' => $this->faker->randomNumber(5, true),
-            'nama_poktan' => $this->faker->name(),
-            'NIK' => $this->faker->randomNumber(5, true),
-            'ketua' => $this->faker->firstName(),
-            'alamat_sekretariat' => $this->faker->streetAddress() ,
-            'kelurahan' => $this->faker->address(),
-            'kecamatan' => $this->faker->city(),
-            'verifikasi' => $this->faker->word(),
-            'bantuan' => $this->faker->word(),
-            'sumber_dana' => $this->faker->word(),
-            'jenis_bantuan' => $this->faker->word(),
+            'name' => $this->faker->name(),
+            'username' => $this->faker->name(),
             'remember_token' => Str::random(10),
             
             // 'name' => $this->faker->name(),

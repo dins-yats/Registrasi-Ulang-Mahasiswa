@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardpostController;
+use App\Http\Controllers\KeuanganController;
 use App\Http\Controllers\DashboardUserController;
 use App\Http\Controllers\DatapoktanController;
 use App\Http\Controllers\GantipasswordController;
@@ -29,7 +30,7 @@ use App\Models\User;
 */
 
 Route::get('/', function () {
-    return view('Home',[
+    return view('login.index',[
         "title" => "Home",
     ]);
 });
@@ -84,8 +85,14 @@ Route::post('/dashboard/password', [GantipasswordController::class, 'updatepassw
 // route untuk slug
 Route::get('/dashboard/posts/checkSlug', [DashboardpostController::class, 'checkSlug']);
 
+
+
 Route::resource('/dashboard/posts', DashboardpostController::class)->middleware('auth');
 Route::post('/dashboard/posts/store', [DashboardpostController::class, 'store'])->middleware('auth');
+
+
+Route::resource('/dashboard/keuangan', KeuanganController::class)->middleware('auth');
+Route::post('/dashboard/posts/{id}', [KeuanganController::class, 'update'])->middleware('auth');
 
 // Route::resource('/dashboard/lapor', LaporController::class)->except('show')->middleware('admin');
 // Route::resource('/dashboard/posts/', DashboardPostController::class)->except([

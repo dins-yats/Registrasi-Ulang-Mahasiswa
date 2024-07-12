@@ -16,9 +16,9 @@
     {{-- css login --}}
     
     <link rel="stylesheet" href="/css/style.css ">
-    <link rel="icon" type="image/jpg" href="/img/ketanhijau.ico">
+    <link rel="icon" type="image/jpg" href="/img/sekayu.ico">
 
-    <title>Siketan | {{ $title }}</title>
+    <title>Registrasi Ulang | {{ $title }}</title>
   </head>
   <body>
 

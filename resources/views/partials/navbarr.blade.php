@@ -1,7 +1,7 @@
 {{-- style="background-color:#e8f5e9" --}}
-<nav class="navbar navbar-expand-lg navbar-dark bg-success ">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: aquamarine">
     <div class="container">
-      <a class="navbar-brand" href="/">Siketan</a>
+      <a class="navbar-brand" href="/">Registrasi Ulang</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -31,7 +31,7 @@
       <div class="flex-shrink-0 dropdown ms-auto navbar-dark">
         
         <a href="#" class="d-block link-light text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
-          Welcome back , {{ Auth()->user()->nama_poktan }}
+          Welcome back , {{ Auth()->user()->username }}
           <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
         </a>
         <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">

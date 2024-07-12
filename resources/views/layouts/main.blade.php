@@ -12,9 +12,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     {{-- css login --}}
     
-    <link rel="icon" type="image/jpg" href="/img/ketanhijau.ico">
+       <link rel="icon" type="image/jpg" href="/img/Politenik_Sekayu.png">
 
-    <title>Siketan | {{ $title }}</title>
+    {{-- <title>Registrasi Ulang | {{ $title }}</title> --}}
+    {{-- <title>Registrasi Ulang | {{ $title }}</title> --}}
 
 
 

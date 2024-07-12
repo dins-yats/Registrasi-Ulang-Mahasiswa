@@ -17,12 +17,21 @@ class CreatePostsTable extends Migration
             $table->id();
             $table->foreignId('category_id');
             $table->foreignId('user_id');
-            $table->string('title');
+            $table->string('nama');
+            $table->string('SEMESTER');
+            $table->string('sisa');
+            $table->string('alamat');
+            $table->string('bts_tgl');
+            $table->string('NIM');
+            $table->string('jenis_bayar');
+            $table->string('tahun_akademik');
+            $table->string('no_hp');
+            $table->string('pembayaran');
+            $table->string('tanggal_pembayaran');
+            $table->string('status_pembayaran');
+            $table->string('status_registrasi');
             $table->string('slug')->unique();
-            $table->string('image')->nullable();
-            $table->text('excerpt');
-            $table->text('body');
-            $table->timestamp('published_at')->nullable();
+    
             $table->timestamps();
         });
     }
